@@ -1,0 +1,10 @@
+PayDesk predstavlja osnovnu klasu iz koje se izvode klase BronzeCard, SilverCard i GoldCard. Sve zajedničke atribute, osnovni konstruktor i potrebne funkcije nalaze se u klasi PayDesk.
+PayDesk je implementirana kao abstraktna klasa jer sadrži metodu koja nema svoju implementaciju u okviru nje, a i nije dozvoljeno kreiranje instance ove klase.
+Osim atributa i konstruktora ova klasa sadrži dve statičke metode koje služe za dobijanje discountRate, discount i totalPurchase. Sama f-ja računanja disocuntRate se u svakoj od izvedenih klasa izračunava na drugačiji način. Kako nije moguće overajdovati statičke metode, ova metoda za dobijanje rezultata poziva abstraktnu metodu calculateDiscountRate.
+Poziva se abstraktna metoda jer ona nema implementaciju, a zahteva da je implementira svaka od izvedenih klasa.
+
+Izvedene klase sadrže konstruktor koji unešene atribute prosleđuje baznom konstruktoru.
+Izvedene klase implementiraju abstraktnu metodu calculateDiscountRate na svoj način.
+
+U glavnom programu kreiraju se instance za svaku od izvedenih klasa.
+Poziv statičkih metoda vrši se preko naziva same klase, dok se za obradu podataka kao parametar prosleđuje instanca te klase.
